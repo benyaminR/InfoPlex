@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <div class="col-md-12">
+                <h1 class="card-title">{{ blog.title }}</h1>
+                <p class="card-subtitle mb-2 text-body-secondary">{{ blog.author }}</p>
+                <p class="card-text">{{ blog.content }}</p>
+                <a [routerLink]="['/blogs',blog.id,'edit']" class="btn btn-primary">Edit</a>
+            </div>
+        </div>
+    </div>
+</div>

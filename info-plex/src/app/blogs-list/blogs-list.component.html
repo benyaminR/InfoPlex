@@ -1,0 +1,7 @@
+<div class="container mt-5 ">
+    <div class="row gx-2 gy-2">
+        <app-blogs-list-card class="col-6" *ngFor="let blog of blogsService.blogs; let i = index" [index]="i"
+            [blog]="blog"></app-blogs-list-card>
+    </div>
+
+</div>

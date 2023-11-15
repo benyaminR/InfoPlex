@@ -1,0 +1,9 @@
+<!-- Display content and title -->
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">{{ blog.title }}</h5>
+        <p class="card-text">{{ blog.content }}</p>
+        <!--Add a primary button-->
+        <Button class="btn btn-primary" [routerLink]="['/blogs', blog.id]">Read More</Button>
+    </div>
+</div>
