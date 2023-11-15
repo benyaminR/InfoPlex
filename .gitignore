@@ -1,0 +1,114 @@
+# Compiled output
+info-plex/dist
+info-plex/tmp
+info-plex/out-tsc
+info-plex/bazel-out
+
+# Node
+info-plex/node_modules
+info-plex/npm-debug.log
+info-plex/yarn-error.log
+
+# IDEs and editors
+info-plex/.idea/
+info-plex/.project
+info-plex/.classpath
+info-plex/.c9/
+info-plex/*.launch
+info-plex/.settings/
+info-plex/*.sublime-workspace
+
+# Visual Studio Code
+info-plex/.vscode/*
+!info-plex/.vscode/settings.json
+!info-plex/.vscode/tasks.json
+!info-plex/.vscode/launch.json
+!info-plex/.vscode/extensions.json
+info-plex/.history/*
+
+# Miscellaneous
+info-plex/.angular/cache
+info-plex/.sass-cache/
+info-plex/connect.lock
+info-plex/coverage
+info-plex/libpeerconnection.log
+info-plex/testem.log
+info-plex/typings
+
+# System files
+info-plex/.DS_Store
+info-plex/Thumbs.db
+
+
+## backend
+
+# Compiled class file
+info-plex-backend/**/*.class
+
+# Log file
+info-plex-backend/**/*.log
+
+# BlueJ files
+info-plex-backend/**/*.ctxt
+
+# Mobile Tools for Java (J2ME)
+info-plex-backend/.mtj.tmp/
+
+# Package Files #
+info-plex-backend/*.jar
+info-plex-backend/*.war
+info-plex-backend/*.nar
+info-plex-backend/*.ear
+info-plex-backend/*.zip
+info-plex-backend/*.tar.gz
+info-plex-backend/*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+info-plex-backend/hs_err_pid*
+
+# Maven
+info-plex-backend/target/
+
+# Gradle
+info-plex-backend/build/
+info-plex-backend/out/
+
+# Spring Boot specific
+info-plex-backend/spring.log
+
+# Project's server data
+info-plex-backend/server/
+info-plex-backend/src/main/resources/reports/
+info-plex-backend/src/main/resources/static/
+
+# Node modules
+info-plex-backend/node_modules/
+
+# IDEs and editors
+info-plex-backend/.idea/
+info-plex-backend/*.iml
+info-plex-backend/*.ipr
+info-plex-backend/*.iws
+info-plex-backend/.project
+info-plex-backend/.classpath
+info-plex-backend/.settings/
+info-plex-backend/.vscode/
+info-plex-backend/*.sublime-workspace
+info-plex-backend/*.sublime-project
+
+# Operating System Files
+info-plex-backend/.DS_Store
+info-plex-backend/Thumbs.db
+info-plex-backend/*.swp
+info-plex-backend/*.swo
+
+# Other files
+info-plex-backend/*.bak
+info-plex-backend/*~
+info-plex-backend/nbproject/private/
+info-plex-backend/.buildpath
+info-plex-backend/.externalToolBuilders/
+info-plex-backend/*.launch
+info-plex-backend/.c9/
+info-plex-backend/*.log
+info-plex-backend/.history/
