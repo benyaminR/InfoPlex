@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "InfoplexApplication",
+            "request": "launch",
+            "mainClass": "com.benyamin.infoplex.InfoplexApplication",
+            "projectName": "infoplex-backend"
+        },
+        {
+            "type": "java",
+            "name": "RestServiceApplication",
+            "request": "launch",
+            "mainClass": "com.example.restservice.RestServiceApplication",
+            "projectName": ""
+        },
+        {
+            "type": "java",
             "name": "Spring Boot-RestServiceApplication<rest-service-complete>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
