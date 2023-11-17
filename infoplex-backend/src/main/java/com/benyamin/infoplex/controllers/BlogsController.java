@@ -1,5 +1,6 @@
 package com.benyamin.infoplex.controllers;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.benyamin.infoplex.models.Blog;
 import com.benyamin.infoplex.repositories.BlogRepository;
 
+@CrossOrigin(origins = "http://localhost:4200") // Replace with your Angular app's URL
 @RestController
 public class BlogsController {
 

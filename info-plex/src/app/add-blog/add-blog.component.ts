@@ -24,9 +24,18 @@ export class AddBlogComponent {
       this.applyForm.value.author ?? '',
       this.applyForm.value.title ?? '',
       this.applyForm.value.content ?? ''
-    );
-    // redirect to home page
-    this.router.navigate(['/']);
+    ).subscribe({
+      next: (data) => {
+        // Handle successful response
+        // redirect to home page
+        this.router.navigate(['/']);
+      },
+      error: (error) => {
+        // Handle error
+        console.error('There was an error!', error);
+      }
+    });
+
   }
 
   constructor(private router: Router, private blogsService: BlogsService) {

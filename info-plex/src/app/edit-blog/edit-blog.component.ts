@@ -21,23 +21,38 @@ export class EditBlogComponent {
   });
 
   editBlog() {
+
+
     this.blogsService.editBlog(
       this.id,
       this.editForm.value.author ?? '',
       this.editForm.value.title ?? '',
       this.editForm.value.content ?? ''
-    );
-    // redirect to home page
-    this.router.navigate(['/blogs', this.id.toString()]);
+    ).subscribe({
+      next: (data) => {
+        // Handle successful response
+        // redirect to home page
+        this.router.navigate(['/blogs', this.id.toString()]);
+      },
+      error: (error) => {
+        // Handle error
+        console.error('There was an error!', error);
+      }
+    });
+
+
+
   }
 
   constructor(private router: Router, private blogsService: BlogsService, private route: ActivatedRoute) {
     this.id = Number(this.route.snapshot.paramMap.get('blogId'));
-    var blog = this.blogsService.getBlog(this.id);
-    this.editForm.setValue({ author: blog.author!, title: blog.title!, content: blog.content! });
+
   }
 
   ngOnInit(): void {
+    this.blogsService.getBlog(this.id).subscribe((blog) => {
+      this.editForm.setValue({ author: blog.author!, title: blog.title!, content: blog.content! });
+    });
   }
 
 }
