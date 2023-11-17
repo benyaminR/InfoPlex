@@ -1,15 +1,18 @@
-<form class="container" [formGroup]="editForm" (ngSubmit)="editBlog()">
-    <div class="form-group">
+<form class="container shadow rounded" [formGroup]="editForm" (ngSubmit)="editBlog()">
+    <h3 class="mb-3 pt-3  text-center">Edit Blog</h3>
+    <div class="mb-3">
         <label for="author">Author</label>
         <input type="text" class="form-control" id="author" placeholder="Author" formControlName="author">
     </div>
-    <div class="form-group">
+    <div class="mb-3">
         <label for="title">Title</label>
         <input type="text" class="form-control" id="title" placeholder="Title" formControlName="title">
     </div>
-    <div class="form-group">
+    <div class="mb-3">
         <label for="content">Content</label>
         <textarea class="form-control" id="content" rows="3" formControlName="content"></textarea>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <div class="pb-3">
+        <button class type="submit" class="btn btn-primary">Upload Changes</button>
+    </div>
 </form>

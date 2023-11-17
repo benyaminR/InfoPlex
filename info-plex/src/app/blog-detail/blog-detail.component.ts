@@ -15,11 +15,15 @@ export class BlogDetailComponent {
 
   route: ActivatedRoute = inject(ActivatedRoute);
   blogId: number = -1;
-  blog!: Blog;
+  blog: Blog = {} as Blog;
 
   constructor(private blogsService: BlogsService) {
     this.blogId = Number(this.route.snapshot.paramMap.get('blogId'));
-    this.blog = this.blogsService.getBlog(this.blogId);
-    console.log(this.blog);
+  }
+
+  ngOnInit(): void {
+    this.blogsService.getBlog(this.blogId).subscribe((blog) => {
+      this.blog = blog;
+    });
   }
 }
