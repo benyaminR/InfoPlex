@@ -5,10 +5,10 @@ plugins {
 }
 
 group = 'com.benyamin'
-version = '0.0.1-SNAPSHOT'
 
 java {
 	sourceCompatibility = '17'
+	targetCompatibility = '17'
 }
 
 repositories {
@@ -28,4 +28,8 @@ tasks.named('bootBuildImage') {
 
 tasks.named('test') {
 	useJUnitPlatform()
+}
+
+bootJar {
+    archiveBaseName.set('info-plex')
 }

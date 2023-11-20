@@ -1,0 +1,4 @@
+1. infoplex frontend Deployment and Service
+2. infoplex backend Deployment and Service
+3. ConfigMap for backend service url
+4. DB Secret for backend

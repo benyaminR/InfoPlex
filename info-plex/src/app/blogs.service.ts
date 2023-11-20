@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, catchError, throwError } from 'rxjs';
+import { environment } from '../environments/environment';
 
 
 
@@ -16,9 +17,12 @@ export interface Blog {
   providedIn: 'root'
 })
 export class BlogsService {
-  private apiUrl = 'http://localhost:8080'; // Your Spring Boot API URL
+  private apiUrl = ''; // Your Spring Boot API URL
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    this.apiUrl = environment.backend_endpoint;
+    console.log(this.apiUrl);
+  }
 
   addBlog(author: string, title: string, content: string): Observable<Blog> {
     var date = new Date();

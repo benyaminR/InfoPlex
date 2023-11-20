@@ -8,3 +8,8 @@ export const appConfig: ApplicationConfig = {
   providers: [provideRouter(routes, withComponentInputBinding()), importProvidersFrom(HttpClientModule),
   ]
 };
+
+
+export const environment = {
+  apiUrl: 'http://localhost:8080'
+};

@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: infoplex-frontend-deployment
+  labels:
+    app: infoplex-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: infoplex-frontend
+  template:
+    metadata:
+      labels:
+        app: infoplex-frontend
+    spec:
+      containers:
+      - name: infoplex-frontend
+        image: <frontend-image>
+        ports:
+        - containerPort: 4200 # nodejs app runs on port 3000
+        env: # environment variables for the container
+        - name: NG_APP_BACKEND_ENDPOINT_ENDPOINT
+          valueFrom:
+            configMapKeyRef:
+              name: infoplex-backend-config
+              key: backend-endpoint
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: infoplex-frontend-service
+spec:
+  type: NodePort
+  selector:
+    app: infoplex-frontend
+  ports:
+    - protocol: TCP
+      port: 4200
+      targetPort: 4200
+      nodePort: 30100
