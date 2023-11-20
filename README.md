@@ -3,6 +3,10 @@
 
 InfoPlex is an open-source, full-stack application designed to function like Wikipedia, allowing users to add, delete, and update blog posts. This project was created with the motivation to deploy a full-stack application to AWS using Elastic Kubernetes Service (EKS), Relational Database Service (RDS), and EC2 instances.
 
+📺 A preview video demonstrating the functionality of InfoPlex:
+
+https://github.com/benyaminR/InfoPlex/assets/41753600/9b2fc7f5-af35-45ff-8258-1451872c3c83
+
 ## Table of Contents
 
 - [Technologies Used](#technologies-used)
@@ -10,7 +14,6 @@ InfoPlex is an open-source, full-stack application designed to function like Wik
 - [Environment Variables](#environment-variables)
 - [Running the Application](#running-the-application)
 - [Deployment](#deployment)
-- [Preview Video](#preview-video)
 - [Contributing](#contributing)
 
 ## Technologies Used
@@ -80,11 +83,6 @@ InfoPlex is configured for deployment on Kubernetes. To deploy the application:
 cd infoplex-cluster
 kubectl apply -f .
 ```
-
-## Preview Video
-📺 A preview video demonstrating the functionality of InfoPlex:
-
-https://github.com/benyaminR/InfoPlex/assets/41753600/9b2fc7f5-af35-45ff-8258-1451872c3c83
 
 ## Contributing
 
